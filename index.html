@@ -10,6 +10,44 @@
         <meta name="description" content="${description}" />
 
         <style>
+        * {
+            -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+                 -o-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                    box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #ad {
+            text-align: center;
+            padding: 10px;
+            height: 100px;
+            position: absolute;
+            bottom: 0px;
+            background: hsla(0, 0%, 20%, 0.5);
+            width: 100%;
+
+            transition: 500ms;
+            -webkit-transition: 500ms;
+        }
+        #ad li {
+            height: 100%;
+            width: 80px;
+            display: inline-block;
+        }
+        #ad a {
+            height: 100%;
+            display: inline-block;
+        }
+        #ad img {
+            height: 100%;
+        }
+        #ad.close {
+            height: 0px;
+            padding: 0px;
+        }
         </style>
 
         <script src="http://cdn.rawgit.com/phi-jp/tmlib.js/0.4.0/build/tmlib.js"></script>
@@ -19,5 +57,22 @@
     </head>
     <body>
         <canvas id="world"></canvas>
+
+        <ul id="ad" class='close'>
+            <li>
+                <a target="_blank" href="http://www.amazon.co.jp/gp/product/B00HWLJI3U/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=B00HWLJI3U&linkCode=as2&tag=yuuki05a-22">
+                    <img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00HWLJI3U&Format=_SL110_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=yuuki05a-22" >
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="http://www.amazon.co.jp/gp/product/B00OIDI7SW/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=B00OIDI7SW&linkCode=as2&tag=yuuki05a-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00OIDI7SW&Format=_SL110_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=yuuki05a-22" ></a>
+            </li>
+            <li>
+                <a target="_blank" href="http://www.amazon.co.jp/gp/product/4873115655/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=4873115655&linkCode=as2&tag=yuuki05a-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4873115655&Format=_SL110_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=yuuki05a-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=yuuki05a-22&l=as2&o=9&a=4873115655" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            </li>
+            <li>
+                <a target="_blank" href="http://www.amazon.co.jp/gp/product/B00QH3HQMO/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=B00QH3HQMO&linkCode=as2&tag=yuuki05a-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00QH3HQMO&Format=_SL110_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=yuuki05a-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=yuuki05a-22&l=as2&o=9&a=B00QH3HQMO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            </li>
+        </ul>
     </body>
 </html>

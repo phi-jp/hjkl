@@ -73,12 +73,18 @@ tm.define("TitleScene", {
         });
 
         this.touchLabel.text = "PRESS 'SPACE' START";
+
+        openAd();
     },
 
     update: function(app) {
         if (app.keyboard.getKey('space')) {
             this.app.popScene();
         }
+    },
+
+    onexit: function() {
+        closeAd();
     },
 });
 

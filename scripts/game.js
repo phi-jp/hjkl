@@ -78,6 +78,7 @@ tm.define("GameScene", {
             score: this.score,
         };
         this.app.popScene();
+        openAd();
     },
 
     setLevel: function(level) {

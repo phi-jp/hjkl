@@ -67,3 +67,14 @@ var LEVEL_MAP_TABLE = [
 var FIRST_LEVEL = 0;
 
 
+var openAd = function() {
+    tm.dom.Element("#ad").classList.remove("close")
+};
+
+var closeAd = function() {
+    tm.dom.Element("#ad").classList.add("close")
+};
+
+
+
+
