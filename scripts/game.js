@@ -98,7 +98,8 @@ tm.define("GameScene", {
         this.nextArguments = {
             score: this.score,
             message: "RANK:{rank} \n『hjkl』で vim 学ぼう!!".format({rank:rank}),
-            hashtags: "tmlib,game,hjkl"
+            hashtags: "tmlib,game,hjkl",
+            url: window.location.href,
         };
         this.app.popScene();
         openAd();
