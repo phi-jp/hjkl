@@ -63,6 +63,8 @@ tm.define("GameScene", {
         var key = app.keyboard;
         var code = this.questionMap[target.text];
         if (key.getKey(code)) {
+            tm.asset.Manager.get("type").clone().play();
+            
             this.lock = true;
             target.disappear();
             target.ondisappeared = function() {

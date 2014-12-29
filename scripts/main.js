@@ -15,18 +15,17 @@ tm.main(function() {
     // ウィンドウにフィットさせる
     app.fitWindow();
 
-    // // ロード
-    // var loading = tm.scene.LoadingScene({
-    //     assets: {
-    //         "bgm": "sounds/bgm.mp3",
-    //     },
-    // });
-    // loading.onload = function() {
-    //     // シーン切り替え
-    //     app.replaceScene(ManagerScene());
-    // };
-    // app.replaceScene(loading);
-    app.replaceScene(ManagerScene());
+    // ロード
+    var loading = tm.scene.LoadingScene({
+        assets: ASSETS,
+        width: SCREEN_WIDTH,
+        height: SCREEN_HEIGHT,
+    });
+    loading.onload = function() {
+        // シーン切り替え
+        app.replaceScene(ManagerScene());
+    };
+    app.replaceScene(loading);
 
     // 実行
     app.run();
@@ -71,6 +70,19 @@ tm.define("TitleScene", {
             height: SCREEN_HEIGHT,
             title: "hjkl",
         });
+
+        this.fromJSON({
+            children: {
+                middleLabel: {
+                    type: "tm.display.Label",
+                    text: "vim のカーソル操作を学ぶゲーム\n矢印の方向に合わせて hjkl のどれかを押すだけ",
+                    x: SCREEN_CENTER_X,
+                    y: SCREEN_CENTER_Y,
+                    fillStyle: "#888",
+                    fontSize: 22,
+                }
+            }
+        })
 
         this.touchLabel.text = "PRESS 'SPACE' START";
 

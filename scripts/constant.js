@@ -75,6 +75,9 @@ var closeAd = function() {
     tm.dom.Element("#ad").classList.add("close")
 };
 
+var ASSETS = {
+    "type": "sounds/type1.mp3",
+};
 
 
 
