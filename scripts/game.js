@@ -76,8 +76,29 @@ tm.define("GameScene", {
     },
 
     gameover: function() {
+        var score = this.score;
+        var rank = (function() {
+            var rank = 0;
+
+            if (score > 200) rank = 5;
+            else if (score > 150) rank = 4;
+            else if (score > 100) rank = 3;
+            else if (score > 50) rank = 2;
+            else if (score > 20) rank = 1;
+
+            return [
+                'vim って知ってる?',
+                'vim 初心者',
+                'vim 中級者',
+                'vim 上級者',
+                'vim 師匠',
+                'vim 神様',
+            ][rank]
+        })();
         this.nextArguments = {
             score: this.score,
+            message: "RANK:{rank} \n『hjkl』で vim 学ぼう!!".format({rank:rank}),
+            hashtags: "tmlib,game,hjkl"
         };
         this.app.popScene();
         openAd();
