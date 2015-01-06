@@ -2,7 +2,7 @@
 tm.define("GameScene", {
     superClass: "tm.app.Scene",
     
-    init: function() {
+    init: function(param) {
         this.superInit();
         
         this.fromJSON({
@@ -12,13 +12,13 @@ tm.define("GameScene", {
             	},
                 questionGroup: {
                     type: "tm.display.CanvasElement",
-                }
+                },
             }
         });
 
         this.score = 0;
         this.questionMap = QUESTION_MAP_TABLE["arrow"];
-        this.setLevel(0);
+        this.setLevel(param.level);
     },
 
     onenter: function(e) {
@@ -54,25 +54,22 @@ tm.define("GameScene", {
             }
         }
 
-
-        if (this.lock == true) return ;
-
-        var target = this.questionGroup.children.first;
+        // target
+        var target = this.getTarget();
         if (target == null) return ;
 
         var key = app.keyboard;
         var code = this.questionMap[target.text];
-        if (key.getKey(code)) {
-            tm.asset.Manager.get("type").clone().play();
-            
-            this.lock = true;
-            target.disappear();
-            target.ondisappeared = function() {
-                this.lock = false;
-            }.bind(this);
 
+        if (key.getKeyDown(code)) {
+            this.addChild(target);
+            target.disappear();
             this.score++;
         }
+    },
+
+    getTarget: function() {
+        return this.questionGroup.children.first;
     },
 
     gameover: function() {

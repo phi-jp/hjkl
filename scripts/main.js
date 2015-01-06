@@ -36,7 +36,7 @@ tm.define("ManagerScene", {
 
     init: function() {
         this.superInit({
-            startLabel: "title",
+            startLabel: QUERY.scene,
             scenes: [
                 {
                     className: "TitleScene",
@@ -45,6 +45,9 @@ tm.define("ManagerScene", {
                 {
                     className: "GameScene",
                     label: "game",
+                    arguments: {
+                        level: QUERY.level,
+                    },
                     nextLabel: "result",
                 },
                 {

@@ -64,8 +64,12 @@ var LEVEL_MAP_TABLE = [
         frame: 300,
     },
 ];
-var FIRST_LEVEL = 0;
-
+var FIRST_LEVEL = 4;
+var QUERY = tm.util.QueryString.parse(location.search.substr(1));
+QUERY.$safe({
+    "scene": "title",
+    "level": 0,
+});
 
 var openAd = function() {
     tm.dom.Element("#ad").classList.remove("close")
