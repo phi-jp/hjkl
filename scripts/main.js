@@ -9,7 +9,7 @@
 tm.main(function() {
     // キャンバスアプリケーションを生成
     var app = tm.display.CanvasApp("#world");
-    app.background = "black";
+    app.background = "#eee";
     // リサイズ
     app.resize(SCREEN_WIDTH, SCREEN_HEIGHT);
     // ウィンドウにフィットさせる

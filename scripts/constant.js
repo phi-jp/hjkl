@@ -40,7 +40,7 @@ var QUESTION_MAP_TABLE = {
 var LEVEL_MAP_TABLE = [
     {
         interval: 30,
-        speed: 2,
+        speed: 3,
         frame: 300,
     },
     {
@@ -50,7 +50,7 @@ var LEVEL_MAP_TABLE = [
     },
     {
         interval: 15,
-        speed: 4,
+        speed: 5,
         frame: 300,
     },
     {
@@ -60,11 +60,10 @@ var LEVEL_MAP_TABLE = [
     },
     {
         interval: 10,
-        speed: 6,
+        speed: 7,
         frame: 300,
     },
 ];
-var FIRST_LEVEL = 4;
 var QUERY = tm.util.QueryString.parse(location.search.substr(1));
 QUERY.$safe({
     "scene": "title",

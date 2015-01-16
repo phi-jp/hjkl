@@ -120,12 +120,21 @@ tm.define("GameScene", {
 
 
 tm.define("QuestionLabel", {
-    superClass: "tm.display.Label",
+    superClass: "tm.display.CanvasElement",
 
     init: function(text) {
         this.superInit(text);
-        this.fontSize = 64;
         this.speed = 1;
+
+        this.bg = tm.display.RoundRectangleShape({
+            width: 72,
+            height: 72,
+            fillStyle: "hsla(220, 70%, 60%, 1.0)",
+        }).addChildTo(this);
+
+        this.label = tm.display.Label(text).addChildTo(this);
+        this.label.fontSize = 52;
+        this.text = text;
     },
 
     update: function() {
