@@ -1,0 +1,25 @@
+{
+  "name": "hjkl",
+  "version": "1.0.0",
+  "description": "hjkl ====",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phi-jp/hjkl.git"
+  },
+  "author": "phi-jp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phi-jp/hjkl/issues"
+  },
+  "homepage": "https://github.com/phi-jp/hjkl",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.0.2"
+  }
+}
